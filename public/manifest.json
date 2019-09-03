@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Phone Checker",
+  "name": "What kind of phone do I have?",
   "icons": [
     {
       "src": "favicon.ico",

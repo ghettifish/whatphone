@@ -1,23 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+function getPhone() {
+  let useragent = navigator.userAgent;
+  let regex = /((?<=\().+?(?=\)))/;
+  
+  return useragent.match(regex)[0];
+}
+
+
 function App() {
+  console.log(getPhone());
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <h1 style={{fontSize: 24, margin: 0}}>You have a:</h1>
+        <h3 style={{fontSize: 42, margin: 0, color: "#209054"}}>
+            {getPhone()}
+        </h3>
+        <p style={{fontSize: 12}}>
+          <strong>useragent: </strong>{navigator.userAgent}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
