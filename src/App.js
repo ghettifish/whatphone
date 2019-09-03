@@ -3,7 +3,7 @@ import './App.css';
 
 function getPhone() {
   let useragent = navigator.userAgent;
-  let regex = /((?<=\().+?(?=\)))/;
+  let regex = /((\().+?(\)))/;
   
   return useragent.match(regex)[0];
 }
